@@ -1,0 +1,7 @@
+# design references & source material (not part of the website)
+*.pptx
+/projects/
+/Snapchat-*.jpg
+/original-*.webp
+/[0-9a-f]*.webp
+.impeccable/
