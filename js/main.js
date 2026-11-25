@@ -46,4 +46,68 @@
   });
 
   $('#yr').textContent = new Date().getFullYear();
+
+  /* ---------- motion layer (GSAP + Lenis), skipped for reduced motion ---------- */
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !window.gsap || !window.ScrollTrigger) return;
+  gsap.registerPlugin(ScrollTrigger);
+
+  if (window.Lenis) {
+    const lenis = new Lenis({ lerp: 0.1, smoothWheel: true });
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add(t => lenis.raf(t * 1000));
+    gsap.ticker.lagSmoothing(0);
+    $$('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
+      const id = a.getAttribute('href');
+      if (id.length < 2 || !document.querySelector(id)) return;
+      e.preventDefault(); lenis.scrollTo(id === '#top' ? 0 : id, { offset: id === '#top' ? 0 : -72 });
+    }));
+  }
+
+  const mm = gsap.matchMedia();
+
+  /* hero copy lifts away as the camera dives to the ground (desktop sticky hero) */
+  mm.add('(min-width: 761px)', () => {
+    gsap.to('#heroCopy', {
+      yPercent: -18, opacity: 0, ease: 'none',
+      scrollTrigger: { trigger: '.hero-pin', start: 'top top', end: '30% top', scrub: true }
+    });
+    gsap.to('.scroll-cue', { opacity: 0, scrollTrigger: { trigger: '.hero-pin', start: 'top top', end: '15% top', scrub: true } });
+  });
+
+  /* cinematic band: frame opens, image settles, words light up in sequence */
+  const band = gsap.timeline({ scrollTrigger: { trigger: '#band', start: 'top 85%', end: 'bottom 40%', scrub: 0.6 } });
+  band.to('.band-media', { clipPath: 'inset(0% 0% round 0px)', ease: 'none' }, 0)
+      .to('.band-media img', { scale: 1, ease: 'none' }, 0)
+      .to('.band-line span', { opacity: 1, stagger: 0.15, ease: 'none' }, 0.1);
+
+  /* project plates rise in with a 3D tilt */
+  $$('.plate').forEach(p => gsap.from(p, {
+    rotateX: 16, y: 90, scale: 0.94, opacity: 0, transformPerspective: 1400, transformOrigin: '50% 100%',
+    ease: 'power2.out',
+    scrollTrigger: { trigger: p, start: 'top 95%', end: 'top 55%', scrub: 0.6 }
+  }));
+
+  /* parallax inside service images */
+  $$('.svc-media img').forEach(img => gsap.fromTo(img, { yPercent: -8 }, {
+    yPercent: 8, ease: 'none',
+    scrollTrigger: { trigger: img.parentElement, start: 'top bottom', end: 'bottom top', scrub: true }
+  }));
+
+  /* signal line in the program chain draws across */
+  gsap.from('.chain-line', { scaleX: 0, transformOrigin: '0 50%', ease: 'none',
+    scrollTrigger: { trigger: '.chain', start: 'top 85%', end: 'top 45%', scrub: true } });
+
+  /* pointer tilt on cards (fine pointers only) */
+  if (matchMedia('(pointer: fine)').matches) {
+    $$('.svc, .build-card').forEach(el => {
+      const max = el.classList.contains('build-card') ? 10 : 5;
+      el.addEventListener('pointermove', e => {
+        const r = el.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+        el.style.transform = `perspective(1000px) rotateX(${-y * max}deg) rotateY(${x * max}deg) translateZ(0)`;
+      });
+      el.addEventListener('pointerleave', () => { el.style.transform = ''; });
+    });
+  }
 })();
