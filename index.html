@@ -3,362 +3,422 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aerox ERP — Aerospace, Robotics & AI</title>
-<meta name="description" content="Aerox ERP engineers satellite antennas, radar systems, robotics and AI-powered business software — from orbit to ground.">
+<title>Aerox ERP — Aerospace, Robotics &amp; AI</title>
+<meta name="description" content="Aerox ERP designs SAR antenna arrays, satellite ground terminals, autonomous robots and the AI software and intelligent ERP that connect them. From orbit to ground.">
+<meta name="theme-color" content="#07090B">
 <link rel="icon" href="images/aerox-logo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Host+Grotesk:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/aerox.css">
 </head>
 <body>
 
-<!-- ================= NAV ================= -->
-<nav id="nav">
-  <div class="container" style="position:relative">
-    <div class="nav-bar">
-      <div class="nav-side l"><a href="#projects">Projects</a><a href="#program">Program</a><a href="#services">Services</a></div>
-      <a href="#home" class="logo"><img src="images/aerox-logo.svg" alt="Aerox logo">Aerox</a>
-      <div class="nav-side r"><a href="aiman.html">Who's Aiman</a><a href="#event">Event</a><a href="#contact" class="cta">Book a Demo ↗</a></div>
-      <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+<!-- ============ NAV ============ -->
+<nav class="nav" id="nav" aria-label="Primary">
+  <div class="wrap">
+    <a href="#top" class="brand" aria-label="Aerox ERP home"><img src="images/aerox-logo.svg" alt="">AEROX <small>ERP</small></a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#services">Services</a>
+      <a href="#founder">Founder</a>
+      <a href="#event">Event</a>
     </div>
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="#projects">Projects</a><a href="#program">Program</a><a href="#services">Services</a><a href="aiman.html">Who's Aiman</a><a href="#event">Event</a><a href="#contact">Book a Demo</a>
+    <div class="nav-cta">
+      <a href="#projects" class="btn btn-line btn-sm">Explore Projects</a>
+      <a href="#contact" class="btn btn-amber btn-sm">Book a Demo</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel"><span></span></button>
     </div>
+  </div>
+  <div class="mobile-panel" id="mobilePanel">
+    <a href="#about">About</a><a href="#projects">Projects</a><a href="#services">Services</a><a href="#founder">Founder</a><a href="#event">Event</a><a href="#contact">Book a Demo</a>
   </div>
 </nav>
 
-<!-- ================= HERO ================= -->
-<header class="cine" id="home">
-  <img class="cine-bg" src="images/projects/sar-clean.jpg" alt="">
-  <div class="readout">
-    <div>Array <b>8 × 8</b></div>
-    <div>Band <b>X · ~9.65 GHz</b></div>
-    <div>Polarization <b>H / V</b></div>
-  </div>
-  <div class="container">
-    <div class="cine-main">
-      <div>
-        <span class="eyebrow">Aerox ERP · Aerospace, Robotics &amp; AI</span>
-        <h1>From Orbit<br>to <em>Ground.</em></h1>
-        <p class="lead">We engineer SAR antenna arrays, satellite ground terminals, research infrastructure, autonomous robots and the AI software that connects them, from orbit to analysis.</p>
-        <div class="btns">
-          <a href="#projects" class="pill">Explore Projects <span class="arr">↗</span></a>
-          <a href="#contact" class="ghost">Book a Demo</a>
-        </div>
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="hero-sky" aria-hidden="true"></div>
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-earth" aria-hidden="true"></div>
+
+  <svg class="orbit" viewBox="0 0 760 420" fill="none" aria-hidden="true">
+    <ellipse cx="380" cy="210" rx="340" ry="140" transform="rotate(-18 380 210)" stroke="rgba(214,232,240,.14)" stroke-dasharray="2 6"/>
+    <ellipse cx="380" cy="210" rx="250" ry="96" transform="rotate(-18 380 210)" stroke="rgba(214,232,240,.07)"/>
+    <g class="sat">
+      <rect x="-5" y="-5" width="10" height="10" fill="#3DD6E0"/>
+      <rect x="-22" y="-2" width="13" height="4" fill="rgba(61,214,224,.5)"/>
+      <rect x="9" y="-2" width="13" height="4" fill="rgba(61,214,224,.5)"/>
+    </g>
+    <text x="600" y="64" fill="#7D8A93" font-family="Geist Mono, monospace" font-size="11" letter-spacing="1">LEO · X-BAND DOWNLINK</text>
+    <line x1="596" y1="60" x2="556" y2="60" stroke="rgba(214,232,240,.2)"/>
+  </svg>
+
+  <div class="wrap hero-main">
+    <div>      <h1 class="rv d1">From Orbit<br>to <span>Ground.</span></h1>
+      <p class="lede rv d2">We design SAR antenna arrays, satellite ground terminals and autonomous robots, and build the AI software and intelligent ERP that connect them into one working system.</p>
+      <div class="hero-ctas rv d3">
+        <a href="#projects" class="btn btn-line">Explore Projects</a>
+        <a href="#contact" class="btn btn-amber">Book a Demo <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
       </div>
-      <a href="#projects" class="spot">
-        <div class="ph"><img src="images/projects/robot-dog.jpg" alt="Quadruped robot with LiDAR mount"></div>
-        <div class="tx">
-          <div><small>Latest build</small><h4>Quadruped Robot + LiDAR</h4><p>Autonomous mapping and navigation</p></div>
-          <span class="round">↗</span>
-        </div>
-      </a>
+      <div class="coords mono rv d3" aria-hidden="true">
+        <span>Segment <b>Space / Ground / Edge</b></span>
+        <span>HQ <b>Pakistan</b></span>
+      </div>
     </div>
-    <div class="statbar">
-      <div><b><span class="count" data-to="64">0</span></b><span>Element SAR array</span></div>
-      <div><b>3<small>m</small></b><span>Ground terminal reflector</span></div>
-      <div><b>S/X</b><span>Band ground link</span></div>
-      <div><b>H/V</b><span>Dual polarization</span></div>
+
+    <a href="#robot" class="build-card rv d2" aria-label="Latest build: Quadruped Robot with LiDAR">
+      <header class="mono"><span class="live">Latest build</span><span>AX-RB-02</span></header>
+      <figure>
+        <img src="images/projects/robot-dog.jpg" alt="Quadruped robot carrying a custom LiDAR and sensor mount">
+        <span class="tag-pin" style="top:12%;left:52%">LiDAR</span>
+        <span class="tag-pin" style="top:44%;left:8%">Depth camera</span>
+      </figure>
+      <div class="body">
+        <h3>Quadruped Robot + LiDAR</h3>
+        <dl>
+          <div><dt>Function</dt><dd>Mapping &amp; navigation</dd></div>
+          <div><dt>Payload</dt><dd>Custom sensor mount</dd></div>
+        </dl>
+      </div>
+    </a>
+  </div>
+
+  <!-- capability metrics -->
+  <div class="metrics" aria-label="Key capabilities">
+    <div class="wrap">
+      <div class="metric"><span class="mono">SAR array</span><b>8×8</b><span>64-element patch array</span></div>
+      <div class="metric"><span class="mono">Ground terminal</span><b>3<small>m</small></b><span>Tracking reflector</span></div>
+      <div class="metric"><span class="mono">RF bands</span><b>S / X</b><span>Telemetry &amp; data link</span></div>
+      <div class="metric"><span class="mono">Polarization</span><b>H / V</b><span>Dual-polarized</span></div>
     </div>
   </div>
 </header>
 
-<div class="caps-row">
-  <div class="container">
-    <span>Satellite Systems</span><span>Radar &amp; Antennas</span><span>Robotics</span><span>Artificial Intelligence</span><span>Intelligent ERP</span>
-  </div>
-</div>
-
-<!-- ================= ABOUT ================= -->
+<!-- ============ ABOUT ============ -->
 <section id="about">
-  <div class="container about-grid">
-    <div class="reveal">
-      <span class="eyebrow">About Aerox</span>
-      <h2>Engineering <em>Intelligence</em> for a Smarter World</h2>
-      <div class="tiles">
-        <div><img src="images/projects/radome.jpg" alt="Radar radome on steel tower" style="object-position:50% 60%"></div>
-        <div><img src="images/projects/ground-station.jpg" alt="Satellite ground station antenna in 3D CAD"></div>
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="rv">
+        <span class="label"><span class="idx">01</span> About</span>
+        <h2>Engineering Intelligence for a Smarter World</h2>
+      </div>
+      <div class="about-copy rv d1">
+        <p>Aerox brings aerospace, robotics and artificial intelligence under one roof. We design the antennas that talk to satellites, the terminals that track them, the robots that map the ground, and the software that turns their data into decisions.</p>
+        <p>Keeping RF, mechanical and software engineering on one team means fewer hand-offs and systems that are designed to work together from the first drawing.</p>
       </div>
     </div>
-    <div>
-      <p class="reveal-text" id="revealText">Aerox brings aerospace engineering, robotics and artificial intelligence together under one roof. We design antennas that talk to satellites, radar stations that watch the sky, robots that map the world around them and software that turns all of that data into decisions. Every project starts with a real problem and ends with a system that works.</p>
-      <div class="about-foot reveal">
-        <div>
-          <div class="avatars"><i style="background:#2E8C7B">RF</i><i style="background:#1d2a2d">RB</i><i style="background:#0F2F29">AI</i></div>
-          <small>RF, robotics and AI engineers on one team</small>
-        </div>
-        <a href="#contact" class="pill">Talk To Us <span class="arr">↗</span></a>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- ================= PROJECTS ================= -->
-<section id="projects" style="padding-top:20px">
-  <div class="container">
-    <div class="works-head reveal">
-      <div><span class="eyebrow">Past projects</span><h2>Built by <em>Aerox</em></h2></div>
-      <p style="max-width:380px;color:var(--muted);font-size:15px">A look at the systems our team has designed and built. Click any project to see it full size.</p>
-    </div>
-    <div class="bento" id="bento"></div>
-  </div>
-</section>
-
-<!-- ================= PROGRAM: SUPARCO × RESOLVE ================= -->
-<section id="program" class="program">
-  <img class="program-bg" src="images/earth.jpg" alt="">
-  <div class="container">
-    <div class="works-head reveal">
-      <div>
-        <span class="eyebrow">Featured program · Proposed collaboration</span>
-        <h2>SUPARCO × <em>Resolve</em></h2>
-      </div>
-      <p style="max-width:420px;color:var(--muted);font-size:15px">Collaborative space technology and orbital research architecture, from terrestrial infrastructure to space-based research.</p>
-    </div>
-
-    <!-- architecture chain -->
-    <div class="chain reveal">
-      <div class="node"><small>01 · Space</small><h4>Orbital Platform</h4><p>Hosted scientific and technology payloads</p></div>
-      <div class="node"><small>02 · Experiment</small><h4>SAR Payload</h4><p>Dual-polarized X-band array</p></div>
-      <div class="node"><small>03 · Connect</small><h4>MSCTT</h4><p>Tracking, telemetry and data reception</p></div>
-      <div class="node"><small>04 · Learn</small><h4>BSORC</h4><p>Research, operations and data analysis</p></div>
-    </div>
-    <div class="loop reveal"><span>Sense</span>→<span>Connect</span>→<span>Operate</span>→<span>Learn</span><em>A closed loop: every mission result feeds the next experiment.</em></div>
-
-    <!-- three pillars -->
     <div class="pillars">
-      <div class="pillar reveal">
-        <span class="no">01</span>
-        <h3>BSORC</h3>
-        <small>Balochistan Space Operations &amp; Research Centre</small>
-        <ul><li>Space science &amp; technology R&amp;D</li><li>Ground-side mission support</li><li>Data processing, analysis &amp; visualization</li><li>Training &amp; technology validation</li></ul>
-        <p class="note">Proposed terrestrial centre, not an orbital station.</p>
-      </div>
-      <div class="pillar reveal">
-        <span class="no">02</span>
-        <h3>MSCTT</h3>
-        <small>Modular S/X-Band Satellite Ground Terminal</small>
-        <ul><li>Two-axis antenna tracking</li><li>S/X-band RF subsystem</li><li>SDR · FPGA · edge computing</li><li>Mission software &amp; secure remote ops</li></ul>
-        <p class="note">Baseline: 3 m reflector · LEO · GNSS timing · closed-loop pointing</p>
-      </div>
-      <div class="pillar reveal">
-        <span class="no">03</span>
-        <h3>SAR Payload</h3>
-        <small>Dual-Polarized X-Band Antenna Array</small>
-        <ul><li>8 × 8, 64-element planar array</li><li>~9.65 GHz operating point</li><li>H / V dual polarization</li><li>Scalable path to larger apertures</li></ul>
-        <p class="note">Development-stage technology, not flight-qualified hardware.</p>
-      </div>
+      <article class="pillar rv">
+        <span class="mono">P.01</span>
+        <h3><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 18a12 12 0 0 1 16 0M7 15a8 8 0 0 1 10 0M10 12a4 4 0 0 1 4 0"/><circle cx="12" cy="9" r="1.2" fill="currentColor"/></svg></span>RF</h3>
+        <p>Antenna arrays, ground-segment RF chains and signal processing, from EM simulation to bench measurement.</p>
+        <ul><li>Phased arrays</li><li>S/X-band</li><li>SDR · FPGA</li></ul>
+      </article>
+      <article class="pillar rv d1">
+        <span class="mono">P.02</span>
+        <h3><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="7" width="14" height="7" rx="2"/><path d="M8 14v5M16 14v5M10 7V4h4v3"/><circle cx="9.5" cy="10.5" r=".9" fill="currentColor"/></svg></span>Robotics</h3>
+        <p>Autonomous platforms with custom sensor integration, perception and control software.</p>
+        <ul><li>Legged robots</li><li>LiDAR</li><li>Navigation</li></ul>
+      </article>
+      <article class="pillar rv d2">
+        <span class="mono">P.03</span>
+        <h3><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="12" cy="18" r="2"/><circle cx="12" cy="11" r="2"/><path d="M7.5 7.3 10.5 10M16.5 7.3 13.5 10M12 13v3"/></svg></span>AI</h3>
+        <p>Models that detect, forecast and decide, plus an intelligent ERP that runs the operation around them.</p>
+        <ul><li>Computer vision</li><li>Forecasting</li><li>ERP</li></ul>
+      </article>
     </div>
-
-    <!-- roadmap -->
-    <div class="roadmap-head reveal"><h3>From Concept to Space Qualification</h3><p>Progressive qualification, not a direct jump from prototype to orbit.</p></div>
-    <div class="roadmap">
-      <div class="step reveal"><b>01</b><h4>Develop</h4><p>Simulation · CAD / EM modelling · subsystem design</p></div>
-      <div class="step reveal"><b>02</b><h4>Validate</h4><p>RF measurement · hardware testing · software-in-the-loop</p></div>
-      <div class="step reveal"><b>03</b><h4>Integrate</h4><p>Payload + ground interface · mission data chain · environmental testing</p></div>
-      <div class="step reveal"><b>04</b><h4>Qualify</h4><p>Thermal-vacuum · vibration / shock · EMC / EMI · operational validation</p></div>
-    </div>
-
-    <blockquote class="program-quote reveal">"Our objective is to contribute technology layers that can integrate with Pakistan's evolving space and orbital research ecosystem."</blockquote>
   </div>
 </section>
 
-<!-- ================= SERVICES ================= -->
-<section id="services" style="padding-top:20px">
-  <div class="container">
-    <div class="list-head reveal">
-      <div><span class="eyebrow">What we do</span><h2>Our <em>Services</em></h2></div>
-      <p>From RF hardware to AI software, we design, build and support every layer of the system.</p>
-    </div>
-    <div id="items"></div>
-  </div>
-</section>
-
-<!-- ================= WHO'S AIMAN ================= -->
-<section id="founder" style="padding-top:20px">
-  <div class="container reveal">
-    <div class="founder">
-      <div class="founder-photo">
-        <img class="photo natural" src="images/aiman-fatima.jpg" alt="Aiman Fatima, Founder of Aerox ERP">
-        <div class="tag"><b>Aiman Fatima</b><span>Founder, Aerox ERP</span></div>
+<!-- ============ PROJECTS ============ -->
+<section id="projects" class="projects">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="rv">
+        <span class="label"><span class="idx">02</span> Projects</span>
+        <h2>Built by Aerox</h2>
       </div>
-      <div class="founder-body">
+      <p class="rv d1">Each project below is listed with its real stage of development. We would rather show a precise design baseline than overstate flight heritage.</p>
+    </div>
+
+    <!-- featured program -->
+    <article class="featured rv" aria-labelledby="ft-title">
+      <div class="featured-top">
         <div>
-          <span class="eyebrow">Meet the founder</span>
-          <h2>Who's <span>Aiman?</span></h2>
+          <span class="status prop">Proposed collaboration</span>
+          <h3 id="ft-title">SUPARCO × Resolve</h3>
+          <p>A space technology and orbital research architecture that links a hosted SAR payload, a ground terminal and a research centre into one mission data chain.</p>
         </div>
-        <div>
-          <blockquote>"A visionary mind, a trailblazer in youth innovation."</blockquote>
-          <p class="cite">Creative Leadership Conference 2025</p>
-          <p class="founder-intro">Aiman Fatima is the founder of Aerox ERP. Before Aerox, she founded and led MicroNex Pak as Founder &amp; Chairwoman, championing youth-led innovation, and later sold the company.</p>
-        </div>
-        <div class="facts">
-          <div><b>Top 100</b><span>Student Leaders of Pakistan · CLC 2025</span></div>
-          <div><b>MicroNex</b><span>Founded &amp; sold</span></div>
-          <div><b>FYP'ee</b><span>to Founder host</span></div>
-        </div>
-        <div><a href="aiman.html" class="pill">Read Her Story <span class="arr">↗</span></a></div>
+        <blockquote class="featured-quote">“Our objective is to contribute technology layers that can integrate with Pakistan’s evolving space and orbital research ecosystem.”<cite>Program statement</cite></blockquote>
       </div>
+      <div class="chain">
+        <div class="chain-line" aria-hidden="true"></div>
+        <div class="chain-node"><span class="mono">01 · Space</span><span class="dot"></span><h4>Orbital Platform</h4><p>Hosted science and technology payloads</p></div>
+        <div class="chain-node"><span class="mono">02 · Sense</span><span class="dot"></span><h4>SAR Payload</h4><p>Dual-polarized X-band array</p></div>
+        <div class="chain-node"><span class="mono">03 · Connect</span><span class="dot"></span><h4>MSCTT</h4><p>Tracking, telemetry and data reception</p></div>
+        <div class="chain-node"><span class="mono">04 · Learn</span><span class="dot"></span><h4>BSORC</h4><p>Operations, research and data analysis</p></div>
+      </div>
+      <div class="loop-note mono"><span>Sense → Connect → Operate → <b>Learn</b></span><span>Each mission result feeds the next experiment</span></div>
+    </article>
+
+    <!-- engineering cases -->
+    <div class="cases">
+      <article class="case" id="sar">
+        <div class="plate rv">
+          <img src="images/projects/sar-clean.jpg" alt="Render of an 8 by 8 microstrip patch SAR antenna array on a LEO microsatellite" loading="lazy">
+          <i class="corner c1"></i><i class="corner c2"></i><i class="corner c3"></i><i class="corner c4"></i>
+          <span class="plate-id">AX-RF-01 · RENDER</span>
+        </div>
+        <div class="case-body rv d1">
+          <div class="meta mono"><span>RF Payload</span><span class="status dev">Development stage</span></div>
+          <h3>SAR Payload</h3>
+          <p class="sub">Dual-polarized X-band antenna array</p>
+          <p>A planar microstrip patch array sized for a LEO microsatellite, with a scalable path to larger apertures.</p>
+          <dl class="spec">
+            <div><dt>Configuration</dt><dd>8 × 8, 64-element planar array</dd></div>
+            <div><dt>Frequency</dt><dd>X-band, ~9.65 GHz</dd></div>
+            <div><dt>Polarization</dt><dd>Dual, H / V</dd></div>
+            <div><dt>Platform</dt><dd>LEO microsatellite</dd></div>
+            <div><dt>Status</dt><dd>Development stage, not flight-qualified</dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="case" id="msctt">
+        <div class="plate blueprint rv">
+          <img src="images/projects/ground-station.jpg" alt="CAD model of the MSCTT ground terminal with a 3 metre reflector on a two-axis mount" loading="lazy">
+          <i class="corner c1"></i><i class="corner c2"></i><i class="corner c3"></i><i class="corner c4"></i>
+          <span class="plate-id">AX-GS-01 · CAD</span>
+        </div>
+        <div class="case-body rv d1">
+          <div class="meta mono"><span>Ground Segment</span><span class="status dev">Design baseline</span></div>
+          <h3>MSCTT</h3>
+          <p class="sub">Modular S/X-band satellite ground terminal</p>
+          <p>A tracking terminal for LEO passes, combining the antenna mount, RF chain and mission software in one modular design.</p>
+          <dl class="spec">
+            <div><dt>Reflector</dt><dd>3 m, two-axis tracking</dd></div>
+            <div><dt>Bands</dt><dd>S / X</dd></div>
+            <div><dt>Processing</dt><dd>SDR · FPGA · edge computing</dd></div>
+            <div><dt>Pointing</dt><dd>Closed-loop, GNSS timing</dd></div>
+            <div><dt>Operations</dt><dd>Mission software, secure remote ops</dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="case" id="bsorc">
+        <div class="plate blueprint rv">
+          <img src="images/projects/radome.jpg" alt="3D model of a research node with a radome on a steel tower and a tracking dish" loading="lazy" style="object-position:50% 70%">
+          <i class="corner c1"></i><i class="corner c2"></i><i class="corner c3"></i><i class="corner c4"></i>
+          <span class="plate-id">AX-INF-01 · CONCEPT</span>
+        </div>
+        <div class="case-body rv d1">
+          <div class="meta mono"><span>Infrastructure</span><span class="status prop">Proposed</span></div>
+          <h3>BSORC</h3>
+          <p class="sub">Balochistan Space Operations &amp; Research Centre</p>
+          <p>A proposed terrestrial centre for mission support and research. It is a ground facility, not an orbital station.</p>
+          <dl class="spec">
+            <div><dt>Research</dt><dd>Space science &amp; technology R&amp;D</dd></div>
+            <div><dt>Operations</dt><dd>Ground-side mission support</dd></div>
+            <div><dt>Data</dt><dd>Processing, analysis &amp; visualization</dd></div>
+            <div><dt>People</dt><dd>Training &amp; technology validation</dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="case" id="robot">
+        <div class="plate rv">
+          <img src="images/projects/robot-dog.jpg" alt="Quadruped robot with a custom orange sensor mount carrying a LiDAR unit" loading="lazy" style="object-position:50% 6%">
+          <i class="corner c1"></i><i class="corner c2"></i><i class="corner c3"></i><i class="corner c4"></i>
+          <span class="plate-id">AX-RB-02 · HARDWARE</span>
+        </div>
+        <div class="case-body rv d1">
+          <div class="meta mono"><span>Robotics</span><span class="status built">Latest build</span></div>
+          <h3>Quadruped Robot + LiDAR</h3>
+          <p class="sub">Autonomous mapping platform</p>
+          <p>A four-legged robot fitted with a custom LiDAR and sensor mount, used to build maps and navigate on its own.</p>
+          <dl class="spec">
+            <div><dt>Platform</dt><dd>Quadruped (legged) robot</dd></div>
+            <div><dt>Sensing</dt><dd>LiDAR + onboard camera</dd></div>
+            <div><dt>Integration</dt><dd>Custom-designed sensor mount</dd></div>
+            <div><dt>Function</dt><dd>Autonomous mapping &amp; navigation</dd></div>
+          </dl>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- ================= EVENT ================= -->
-<section id="event" style="padding-top:20px">
-  <div class="container reveal">
-    <div class="event">
-      <div class="grid-bg"></div>
-      <img class="ev-logo" src="images/aerox-logo.svg" alt="">
+<!-- ============ SERVICES ============ -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="rv">
+        <span class="label"><span class="idx">03</span> Services</span>
+        <h2>End-to-end, from first drawing to daily operation</h2>
+      </div>
+      <p class="rv d1">We take responsibility for the whole lifecycle, so the hardware, the data and the software are designed to fit together.</p>
+    </div>
+
+    <div class="lifecycle rv" aria-label="Delivery lifecycle">
+      <div><span class="mono">01</span>Design</div>
+      <div><span class="mono">02</span>Build</div>
+      <div><span class="mono">03</span>Integrate</div>
+      <div><span class="mono">04</span>Operate</div>
+    </div>
+
+    <div class="services-grid">
+      <article class="svc rv">
+        <div class="svc-head">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 19 12 12"/><path d="M4 9a11 11 0 0 1 11 11M4 4a16 16 0 0 1 16 16" opacity=".6"/><circle cx="5" cy="19" r="1.5" fill="currentColor"/></svg></div>
+          <span class="mono dim">S.01</span>
+        </div>
+        <h3>Satellite Systems &amp; Ground Terminals</h3>
+        <p>Payload interfaces, tracking ground terminals and the data pipeline from pass to archive.</p>
+        <ul><li>Ground terminal design</li><li>Tracking &amp; pointing</li><li>Telemetry &amp; data reception</li><li>Mission operations software</li></ul>
+        <div class="stages mono"><span class="on">Design</span><span class="on">Build</span><span class="on">Integrate</span><span class="on">Operate</span></div>
+      </article>
+      <article class="svc rv d1">
+        <div class="svc-head">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="1.5"/><path d="M4 9.3h16M4 14.6h16M9.3 4v16M14.6 4v16" opacity=".6"/></svg></div>
+          <span class="mono dim">S.02</span>
+        </div>
+        <h3>Radar &amp; Antenna Arrays</h3>
+        <p>Antenna and array engineering from EM modelling through fabrication and RF measurement.</p>
+        <ul><li>Microstrip patch arrays</li><li>Dual-polarized design</li><li>CAD &amp; EM simulation</li><li>RF test &amp; validation</li></ul>
+        <div class="stages mono"><span class="on">Design</span><span class="on">Build</span><span class="on">Integrate</span><span class="on">Operate</span></div>
+      </article>
+      <article class="svc rv">
+        <div class="svc-head">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 10h11l3 3H5z"/><path d="M7 13v6M10 13v6M15 13v6M18 13v6"/><circle cx="17" cy="6" r="2"/><path d="M17 8v2"/></svg></div>
+          <span class="mono dim">S.03</span>
+        </div>
+        <h3>Autonomous Robotics</h3>
+        <p>Robots that sense, map and move on their own, with sensor integration and control software built in-house.</p>
+        <ul><li>Sensor mounts &amp; integration</li><li>LiDAR mapping</li><li>Autonomous navigation</li><li>Field deployment</li></ul>
+        <div class="stages mono"><span class="on">Design</span><span class="on">Build</span><span class="on">Integrate</span><span class="on">Operate</span></div>
+      </article>
+      <article class="svc rv d1">
+        <div class="svc-head">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3.5" y="4" width="17" height="12" rx="1.5"/><path d="M7 12l3-3 2 2 4-4M8 20h8M12 16v4"/></svg></div>
+          <span class="mono dim">S.04</span>
+        </div>
+        <h3>AI Software &amp; Intelligent ERP</h3>
+        <p>Models built into the systems we ship, and an ERP that suggests next steps, flags risk and automates routine work.</p>
+        <ul><li>Computer vision &amp; prediction</li><li>Mission &amp; sensor data</li><li>Finance, inventory, HR &amp; sales</li><li>Workflow automation</li></ul>
+        <div class="stages mono"><span class="on">Design</span><span class="on">Build</span><span class="on">Integrate</span><span class="on">Operate</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOUNDER ============ -->
+<section id="founder" class="projects">
+  <div class="wrap founder">
+    <figure class="portrait rv">
+      <img src="images/aiman-fatima.jpg" alt="Aiman Fatima, Founder of Aerox ERP" loading="lazy">
+      <figcaption><div><b>Aiman Fatima</b><span>Founder, Aerox ERP</span></div><span class="mono dim">AX · 001</span></figcaption>
+    </figure>
+    <div class="rv d1">
+      <span class="label"><span class="idx">04</span> Founder</span>
+      <h2>Led by a founder who has built before.</h2>
+      <p class="lede">Aiman Fatima founded Aerox ERP to bring space, robotics and AI engineering into one company. Before Aerox, she founded MicroNex Pak and led it as Founder &amp; Chairwoman, championing youth-led innovation, before selling the company.</p>
+      <blockquote>“A visionary mind, a trailblazer in youth innovation.”<cite>Creative Leadership Conference 2025</cite></blockquote>
+      <div class="creds">
+        <div><b>Top 100</b><span>Student Leaders of Pakistan, CLC 2025</span></div>
+        <div><b>MicroNex Pak</b><span>Founded, led &amp; sold</span></div>
+        <div><b>FYP’ee to Founder</b><span>Host &amp; organiser</span></div>
+      </div>
+      <a href="aiman.html" class="btn btn-line">Read her story <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EVENT ============ -->
+<section id="event">
+  <div class="wrap">
+    <div class="event rv">
       <div>
-        <span class="eyebrow">Upcoming event · Registration open</span>
-        <h2>FYP'ee to <em>Founder</em></h2>
-        <div class="by">Presented by Aerox ERP · Aerox Expo</div>
-        <p>Turn your final-year project into a startup. Pitch to investors over three rounds, meet founders and get your QR-verified certificate.</p>
-        <div class="ev-btns">
-          <a class="pill" href="https://aerox-fyp-to-startup.vercel.app/register.html?type=candidate" target="_blank" rel="noopener">Get Your Pass <span class="arr">↗</span></a>
-          <a class="ghost" href="https://aerox-fyp-to-startup.vercel.app/" target="_blank" rel="noopener">View Event</a>
+        <span class="label"><span class="idx">05</span> Community · Registration open</span>
+        <h2>FYP’ee to Founder</h2>
+        <p class="by mono">Presented by Aerox ERP · Aerox Expo</p>
+        <p>Turn your final-year project into a startup. Pitch to investors over three rounds, meet working founders and leave with a QR-verified certificate.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-amber" href="https://aerox-fyp-to-startup.vercel.app/register.html?type=candidate" target="_blank" rel="noopener">Get your pass <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          <a class="btn btn-line" href="https://aerox-fyp-to-startup.vercel.app/" target="_blank" rel="noopener">View event</a>
         </div>
       </div>
-      <div class="ev-side">
-        <div><b>Innovate</b><span>Bring your project</span></div>
-        <div><b>Pitch</b><span>Three investor rounds</span></div>
-        <div><b>Connect</b><span>Meet founders</span></div>
-        <div><b>Invest</b><span>Back new startups</span></div>
-        <div><b>Showcase</b><span>Demo your build</span></div>
-        <div><b>Inspire</b><span>Learn from leaders</span></div>
+      <ol class="flow" aria-label="Event format">
+        <li><span class="mono">01</span><b>Bring your project</b><span>Final-year build</span></li>
+        <li><span class="mono">02</span><b>Pitch round one</b><span>Investor panel</span></li>
+        <li><span class="mono">03</span><b>Pitch round two</b><span>Feedback &amp; refine</span></li>
+        <li><span class="mono">04</span><b>Final round</b><span>Back new startups</span></li>
+        <li><span class="mono">05</span><b>Connect</b><span>Founders &amp; mentors</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="contact">
+  <div class="wrap contact-grid">
+    <div class="rv">
+      <span class="label"><span class="idx">06</span> Contact</span>
+      <h2>Got a Mission?<br><span>Let’s Launch It.</span></h2>
+      <p class="lede">Tell us what you need to build, track, map or automate. We’ll reply with how we would approach it and what a demo would cover.</p>
+      <div class="direct">
+        <a href="mailto:aeroxerp@gmail.com"><span>aeroxerp@gmail.com</span><span class="mono">Email ↗</span></a>
+        <a href="https://www.linkedin.com/company/https-tally.so-r-zxgjgk-utm_source-ig&amp;utm_medium-social&amp;utm_content-link_in_bio&amp;fbclid-paznrzaas0nud/" target="_blank" rel="noopener"><span>Aerox ERP</span><span class="mono">LinkedIn ↗</span></a>
+        <a href="https://www.instagram.com/aerox.erp/" target="_blank" rel="noopener"><span>@aerox.erp</span><span class="mono">Instagram ↗</span></a>
       </div>
     </div>
+
+    <form class="form rv d1" id="demoForm" novalidate>
+      <div class="row">
+        <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="f-org">Organisation</label><input id="f-org" name="org" autocomplete="organization"></div>
+      </div>
+      <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="f-topic">Area of interest</label>
+        <select id="f-topic" name="topic">
+          <option>Satellite systems &amp; ground terminals</option>
+          <option>Radar &amp; antenna arrays</option>
+          <option>Autonomous robotics</option>
+          <option>AI software &amp; intelligent ERP</option>
+          <option>Partnership / research</option>
+        </select>
+      </div>
+      <div class="field"><label for="f-msg">Mission brief</label><textarea id="f-msg" name="msg" placeholder="What are you trying to achieve, and by when?"></textarea></div>
+      <div class="form-foot">
+        <small id="formNote">Opens your email app with the brief filled in.</small>
+        <button class="btn btn-amber" type="submit">Book a Demo <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+      </div>
+    </form>
   </div>
 </section>
 
-<!-- ================= CONTACT ================= -->
-<section class="contact" id="contact">
-  <div class="container reveal">
-    <span class="eyebrow">Let's build</span>
-    <h2>Got a Mission? Let's <em>Launch</em> It.</h2>
-    <p>Tell us what you want to build, automate or put in orbit. Our team will map out how Aerox can get you there.</p>
-    <a href="mailto:aeroxerp@gmail.com" class="pill">Book A Demo <span class="arr">↗</span></a>
-    <div class="socials">
-      <a href="https://www.instagram.com/aerox.erp/" target="_blank" rel="noopener" aria-label="Aerox ERP on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span>Instagram</span></a>
-      <a href="https://www.linkedin.com/company/https-tally.so-r-zxgjgk-utm_source-ig&amp;utm_medium-social&amp;utm_content-link_in_bio&amp;fbclid-paznrzaas0nud/" target="_blank" rel="noopener" aria-label="Aerox ERP on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.95 1.32-1.95 2.69V21h-4z"/></svg><span>LinkedIn</span></a>
-      <a href="mailto:aeroxerp@gmail.com" aria-label="Email Aerox ERP"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span>Email</span></a>
-    </div>
-
-  </div>
-</section>
+</main>
 
 <footer>
-  <div class="container">
+  <div class="wrap">
     <div class="foot">
-      <div class="foot-top">
-        <div>
-          <a href="#home" class="logo" style="margin-bottom:22px"><img src="images/aerox-logo.svg" alt="">Aerox ERP</a>
-          <div class="foot-links"><a href="#home">Home</a><a href="#about">About</a><a href="#projects">Projects</a><a href="#services">Services</a><a href="aiman.html">Who's Aiman</a><a href="#event">Event</a></div>
-        </div>
-        <div class="foot-right"><a href="mailto:aeroxerp@gmail.com" class="foot-mail">aeroxerp@gmail.com</a>
-        <div class="socials">
-      <a href="https://www.instagram.com/aerox.erp/" target="_blank" rel="noopener" aria-label="Aerox ERP on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span>Instagram</span></a>
-      <a href="https://www.linkedin.com/company/https-tally.so-r-zxgjgk-utm_source-ig&amp;utm_medium-social&amp;utm_content-link_in_bio&amp;fbclid-paznrzaas0nud/" target="_blank" rel="noopener" aria-label="Aerox ERP on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.95 1.32-1.95 2.69V21h-4z"/></svg><span>LinkedIn</span></a>
-      <a href="mailto:aeroxerp@gmail.com" aria-label="Email Aerox ERP"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span>Email</span></a>
-    </div>
-</div>
+      <div>
+        <a href="#top" class="brand"><img src="images/aerox-logo.svg" alt="">AEROX <small>ERP</small></a>
+        <p>Aerospace, robotics and AI engineering. From orbit to ground.</p>
       </div>
-      <div class="copy"><span>© <span id="yr"></span> Aerox ERP. All rights reserved.</span><span>From orbit to ground.</span></div>
+      <div class="foot-cols">
+        <div><h4>Company</h4><a href="#about">About</a><a href="#founder">Founder</a><a href="aiman.html">Who’s Aiman</a><a href="#event">Event</a></div>
+        <div><h4>Work</h4><a href="#sar">SAR Payload</a><a href="#msctt">MSCTT</a><a href="#bsorc">BSORC</a><a href="#robot">Quadruped</a></div>
+        <div><h4>Connect</h4><a href="mailto:aeroxerp@gmail.com">Email</a><a href="https://www.instagram.com/aerox.erp/" target="_blank" rel="noopener">Instagram</a><a href="https://www.linkedin.com/company/https-tally.so-r-zxgjgk-utm_source-ig&amp;utm_medium-social&amp;utm_content-link_in_bio&amp;fbclid-paznrzaas0nud/" target="_blank" rel="noopener">LinkedIn</a></div>
+      </div>
     </div>
+    <div class="foot-base mono"><span>© <span id="yr">2026</span> Aerox ERP</span><span>From orbit to ground</span></div>
   </div>
 </footer>
 
-<!-- lightbox -->
-<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Project image">
-  <button id="lbClose" aria-label="Close">✕</button>
-  <img id="lbImg" src="" alt="">
-  <div class="cap"><h3 id="lbTitle"></h3><p id="lbDesc"></p></div>
-</div>
-
-<script src="js/art.js"></script>
-<script>
-/* ---------- projects (real photos) ---------- */
-const P = 'images/projects/';
-const projects = [
-  {img:'sar-clean.jpg', t:'SAR Payload: Dual-Polarized X-Band Array', d:'8×8, 64-element microstrip patch array for a LEO microsatellite at ~9.65 GHz with H/V polarization. Development stage.', tags:['SUPARCO × Resolve','RF Payload','X-Band']},
-  {img:'robot-dog.jpg', t:'Quadruped Robot + LiDAR', d:'Four-legged robot fitted with a custom LiDAR and sensor mount for autonomous mapping.', tags:['Robotics','LiDAR']},
-  {img:'ground-station.jpg', t:'MSCTT Ground Terminal', d:'Modular S/X-band ground terminal: 3 m reflector, two-axis tracking and SDR/FPGA processing for LEO missions.', tags:['Ground Segment','S/X-Band']},
-  {img:'radome.jpg', t:'BSORC Research Node', d:'Balochistan Space Operations & Research Centre: proposed ground node for research, mission support and data.', tags:['Infrastructure','Proposed']},
-];
-$('bento').innerHTML = projects.map((p,i)=>`
-  <a class="proj p${i+1} reveal" href="${P+p.img}" data-i="${i}">
-    <img src="${P+p.img}" alt="${p.t}" loading="lazy">
-    <span class="num">/ 0${i+1}</span>
-    <div class="info">
-      <div><div class="tags">${p.tags.map(t=>`<span>${t}</span>`).join('')}</div><h3>${p.t}</h3><p>${p.d}</p></div>
-      <span class="round">↗</span>
-    </div>
-  </a>`).join('');
-
-/* lightbox */
-const lb=$('lb');
-function openLb(i){const p=projects[i];$('lbImg').src=P+p.img;$('lbImg').alt=p.t;$('lbTitle').textContent=p.t;$('lbDesc').textContent=p.d;lb.classList.add('show');document.body.style.overflow='hidden';$('lbClose').focus()}
-function closeLb(){lb.classList.remove('show');document.body.style.overflow=''}
-document.querySelectorAll('.proj').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();openLb(+a.dataset.i)}));
-$('lbClose').onclick=closeLb;
-lb.addEventListener('click',e=>{if(e.target===lb)closeLb()});
-addEventListener('keydown',e=>{if(e.key==='Escape')closeLb()});
-
-/* ---------- services ---------- */
-const img = (f,pos='50% 50%') => `<div><img src="${P+f}" alt="" style="object-position:${pos}"></div>`;
-const services = [
-  {t:'Satellite & Space Systems', tags:['LEO','Payloads','Orbital Experiments'], d:'Payloads, ground terminals and orbital experiment operations, from experiment control to the data pipeline.', imgs:img('sar-clean.jpg','60% 50%')+img('ground-station.jpg')+`<div>${art('radar','dark')}</div>`},
-  {t:'Radar & Antenna Engineering', tags:['RF Design','S/X-Band','SAR'], d:'CAD and EM modelling, RF measurement and testing, from microstrip patch arrays to tracking ground antennas.', imgs:img('radome.jpg','50% 60%')+img('sar-clean.jpg','40% 60%')+`<div>${art('orb','teal')}</div>`},
-  {t:'Robotics & Autonomy', tags:['Quadrupeds','LiDAR','Navigation'], d:'Robots that sense, map and move on their own, with custom sensor integration and control software.', imgs:img('robot-dog.jpg','50% 30%')+`<div>${art('arm','steel')}</div>`+`<div>${art('bot','sky')}</div>`},
-  {t:'AI Solutions', tags:['Computer Vision','Prediction','Data'], d:'Models that detect, forecast and decide, built into the hardware and software we ship.', imgs:`<div>${art('neural','dark')}</div><div>${art('chip','teal')}</div><div>${art('bot','steel')}</div>`},
-  {t:'Intelligent ERP', tags:['Finance','Inventory','HR & Sales'], d:'An ERP that does more than keep records. It suggests next steps, flags risks and automates routine work.', imgs:`<div>${art('chip','dark')}</div><div>${art('neural','sky')}</div><div>${art('orb','teal')}</div>`},
-  {t:'Startup Incubation', tags:["FYP'ee to Founder",'Mentoring'], d:'We help students turn final-year engineering projects into funded startups.', imgs:`<div>${art('bot','steel')}</div><div>${art('arm','dark')}</div><div>${art('radar','teal')}</div>`},
-];
-$('items').innerHTML = services.map((e,i)=>`
-  <div class="item reveal ${i===0?'open':''}">
-    <div class="item-top"><h3><sup>0${i+1}</sup>${e.t}</h3><span class="arrow-pill">→</span></div>
-    <div class="item-body">
-      <div class="tags">${e.tags.map(t=>`<span>${t}</span>`).join('')}</div>
-      <p>${e.d}</p>
-      <div class="imgs">${e.imgs}</div>
-    </div>
-  </div>`).join('');
-document.querySelectorAll('.item').forEach(el=>el.addEventListener('click',()=>{
-  const was=el.classList.contains('open');
-  document.querySelectorAll('.item').forEach(x=>x.classList.remove('open'));
-  if(!was) el.classList.add('open');
-}));
-
-/* ---------- scroll-highlight paragraph ---------- */
-const rt=$('revealText');
-rt.innerHTML = rt.textContent.split(' ').map(w=>`<span>${w}</span>`).join(' ');
-const words=[...rt.querySelectorAll('span')];
-function lightWords(){
-  const r=rt.getBoundingClientRect(), vh=innerHeight;
-  const p=Math.min(1,Math.max(0,(vh*.85-r.top)/(r.height+vh*.35)));
-  const n=Math.round(p*words.length);
-  words.forEach((w,i)=>w.classList.toggle('on',i<n));
-}
-
-/* ---------- misc ---------- */
-const nav=$('nav');
-addEventListener('scroll',()=>{nav.classList.toggle('scrolled',scrollY>40);lightWords()},{passive:true}); lightWords();
-$('yr').textContent=new Date().getFullYear();
-const mm=$('mobileMenu');
-$('menuBtn').onclick=()=>mm.classList.toggle('show');
-mm.querySelectorAll('a').forEach(a=>a.onclick=()=>mm.classList.remove('show'));
-
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-
-const cio=new IntersectionObserver(es=>es.forEach(e=>{
-  if(!e.isIntersecting)return;
-  const el=e.target,to=+el.dataset.to;let n=0;const step=Math.max(1,Math.ceil(to/60));
-  const t=setInterval(()=>{n=Math.min(to,n+step);el.textContent=n;if(n>=to)clearInterval(t)},20);
-  cio.unobserve(el);
-}));
-document.querySelectorAll('.count').forEach(el=>cio.observe(el));
-</script>
+<script src="js/main.js"></script>
 </body>
 </html>
